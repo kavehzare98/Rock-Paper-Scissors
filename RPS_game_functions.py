@@ -1,11 +1,9 @@
 import random
-from RPS_ASCII_art import *  # Assuming RPS_ASCII_art contains ASCII art for the game choices
+from RPS_ASCII_art import * 
 
 # Create choice list
 choice_list = ["rock", "paper", "scissor"]
 
-
-# This function will use the random module to make a choice for the computer and returns the choice
 def makeComputerChoice():
     """
     Randomly selects a choice for the computer.
@@ -16,8 +14,6 @@ def makeComputerChoice():
     choice = random.choice(choice_list)
     return choice
 
-
-# This function only prompts the user and accepts user input
 def takeUserInput():
     """
     Prompts the user to input their choice for the game (rock, paper, or scissors).
@@ -29,8 +25,6 @@ def takeUserInput():
     return user_input
 
 
-# This function assumes that the user_input is valid unless it falls outside of choice range or a letter or phrase is
-# entered instead.
 def validateUserInput(user_input):
     """
     Validates the user's input to ensure it is a valid choice for the game.
@@ -56,7 +50,6 @@ def validateUserInput(user_input):
     return valid_input, user_choice
 
 
-# This function takes two inputs: one from the computer and one from the user
 def determineWinner(computer_input, user_choice):
     """
     Determines the winner of the game based on the choices made by the computer and the user.
@@ -90,8 +83,6 @@ def determineWinner(computer_input, user_choice):
         else:
             print("It's a tie!")
 
-
-# Function to prompt the user if they want to play again
 def playAgain():
     """
     Prompts the user to decide whether they want to play the game again.
